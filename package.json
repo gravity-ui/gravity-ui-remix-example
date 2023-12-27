@@ -16,7 +16,7 @@
     "url": "https://github.com/gravity-ui/gravity-ui-remix-example"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "bugs": {
     "url": "https://github.com/gravity-ui/gravity-ui-remix-example/issues"

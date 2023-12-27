@@ -1,4 +1,5 @@
 build
 dist
 public
-remix.config.js
+*.css
+*.css.map
