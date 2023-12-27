@@ -13,10 +13,12 @@ export const links: LinksFunction = () => [
     {rel: 'stylesheet', href: buttonStyles},
 ];
 
-export default function Index() {
+const Index = () => {
     return (
         <Wrapper>
             <InfoButtons />
         </Wrapper>
     );
-}
+};
+
+export default Index;

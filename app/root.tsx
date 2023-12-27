@@ -29,7 +29,7 @@ export const meta: MetaFunction = () => ({
 const theme = 'dark';
 const rootClassName = getInitialRootClassName({theme});
 
-export default function App() {
+const App = () => {
     return (
         <html lang="en">
             <head>
@@ -44,4 +44,6 @@ export default function App() {
             </body>
         </html>
     );
-}
+};
+
+export default App;
