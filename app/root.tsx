@@ -19,12 +19,14 @@ export const links: LinksFunction = () => [
     {rel: 'stylesheet', href: gravityStyles},
 ];
 
-export const meta: MetaFunction = () => ({
-    charset: 'utf-8',
-    title: 'Gravity UI – Remix App Example',
-    viewport: 'width=device-width,initial-scale=1',
-    description: 'Web site created using Remix',
-});
+export const meta: MetaFunction = () => [
+    {
+        charset: 'utf-8',
+        title: 'Gravity UI – Remix App Example',
+        viewport: 'width=device-width,initial-scale=1',
+        description: 'Web site created using Remix',
+    },
+];
 
 const theme = 'dark';
 const rootClassName = getInitialRootClassName({theme});
