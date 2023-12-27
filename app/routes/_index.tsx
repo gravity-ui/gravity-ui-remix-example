@@ -1,17 +1,9 @@
-import {LinksFunction} from '@remix-run/node';
-import {InfoButtons, links as infoButtonsLinks} from '~/components/InfoButtons';
-import {Wrapper, links as wrapperLinks} from '~/components/Wrapper';
+import {InfoButtons} from '~/components/InfoButtons';
+import {Wrapper} from '~/components/Wrapper';
 
-//styles for components from @gravity-ui/uikit
-import buttonStyles from '@gravity-ui/uikit/build/esm/components/Button/Button.css';
-import iconStyles from '@gravity-ui/uikit/build/esm/components/Icon/Icon.css';
-
-export const links: LinksFunction = () => [
-    ...infoButtonsLinks(),
-    ...wrapperLinks(),
-    {rel: 'stylesheet', href: iconStyles},
-    {rel: 'stylesheet', href: buttonStyles},
-];
+// TODO: remove these imports
+import '@gravity-ui/uikit/build/esm/components/Button/Button.css';
+import '@gravity-ui/uikit/build/esm/components/Icon/Icon.css';
 
 const Index = () => {
     return (

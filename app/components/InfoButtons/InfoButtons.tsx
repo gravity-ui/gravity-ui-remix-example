@@ -6,12 +6,9 @@ import Figma from '~/components/icons/Figma';
 import Storybook from '~/components/icons/Storybook';
 import GitHub from '~/components/icons/GitHub';
 
-import infoButtonsStyles from './InfoButtons.css';
-import {LinksFunction} from '@remix-run/node';
+import './InfoButtons.css';
 
 const b = block('info-buttons');
-
-export const links: LinksFunction = () => [{rel: 'stylesheet', href: infoButtonsStyles}];
 
 export const InfoButtons: React.FC = () => {
     return (
