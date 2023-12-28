@@ -14,7 +14,7 @@ Remix template with: typescript, sass and Gravity UI.
 To use this template for your app you can run:
 
 ```sh
-npx create-remix my-project --template gravity-ui-remix-example
+npx create-remix my-project --template gravity-ui/gravity-ui-remix-example
 cd my-project
 
 npm run dev
@@ -23,11 +23,17 @@ npm run dev
 or
 
 ```sh
-yarn create remix my-project --template gravity-ui-remix-example
+yarn create remix my-project --template gravity-ui/gravity-ui-remix-example
 cd my-project
 
 npm run dev
 ```
+
+# 🎨 Styles
+
+This project is using SASS for styles, but Remix requires css in runtime.
+So when `npm run dev` runs the first time, SASS will generate all css code for you. Please don't edit this automatic generated files.
+SASS will watch for changes in your scss files and will regenerate css when it is essential.
 
 # 📖 Learn More
 

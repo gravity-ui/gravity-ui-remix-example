@@ -3,8 +3,7 @@ import block from 'bem-cn-lite';
 import {Button, Icon, Theme, ThemeProvider} from '@gravity-ui/uikit';
 import {Moon, Sun} from '@gravity-ui/icons';
 
-import wrapperStyles from './Wrapper.css';
-import {LinksFunction} from '@remix-run/node';
+import './Wrapper.css';
 
 const b = block('wrapper');
 
@@ -17,8 +16,6 @@ export const DEFAULT_BODY_CLASSNAME = `g-root g-root_theme_${DEFAULT_THEME}`;
 export type AppProps = {
     children: React.ReactNode;
 };
-
-export const links: LinksFunction = () => [{rel: 'stylesheet', href: wrapperStyles}];
 
 export const Wrapper: React.FC<AppProps> = ({children}) => {
     const [theme, setTheme] = React.useState<Theme>(DEFAULT_THEME);
