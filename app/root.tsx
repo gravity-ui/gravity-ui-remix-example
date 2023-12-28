@@ -7,16 +7,15 @@ import {
     Scripts,
     ScrollRestoration as ScrollRestorationRemix,
 } from '@remix-run/react';
+import {cssBundleHref} from '@remix-run/css-bundle';
 import {getInitialRootClassName} from '@gravity-ui/uikit';
 
-import globalStyles from '~/styles/globals.css';
-import gravityFonts from '@gravity-ui/uikit/styles/fonts.css';
-import gravityStyles from '@gravity-ui/uikit/styles/styles.css';
+import '~/styles/globals.css';
+import '@gravity-ui/uikit/styles/fonts.css';
+import '@gravity-ui/uikit/styles/styles.css';
 
 export const links: LinksFunction = () => [
-    {rel: 'stylesheet', href: globalStyles},
-    {rel: 'stylesheet', href: gravityFonts},
-    {rel: 'stylesheet', href: gravityStyles},
+    ...(cssBundleHref ? [{rel: 'stylesheet', href: cssBundleHref}] : []),
 ];
 
 export const meta: MetaFunction = () => [
