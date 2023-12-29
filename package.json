@@ -1,6 +1,7 @@
 {
   "name": "gravity-ui-remix-example",
   "version": "0.1.0",
+  "type": "module",
   "keywords": [
     "react",
     "remix",
@@ -23,14 +24,9 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "build": "run-s \"build:*\"",
-    "build:css": "npm run generate:css -- --style=compressed",
-    "build:remix": "remix build",
-    "dev": "run-p \"dev:*\"",
-    "dev:css": "npm run generate:css -- --watch",
-    "dev:remix": "remix dev",
-    "generate:css": "sass app/:app/",
-    "start": "remix-serve build",
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "start": "remix-serve ./build/server/index.js",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:styles": "stylelint '{styles,app}/**/*.scss'",
     "lint:prettier": "prettier --check '**/*.md'",
@@ -40,16 +36,15 @@
   "dependencies": {
     "@gravity-ui/icons": "^2.6.0",
     "@gravity-ui/uikit": "^5.25.0",
-    "@remix-run/css-bundle": "^2.4.1",
     "@remix-run/node": "^2.4.1",
     "@remix-run/react": "^2.4.1",
     "@remix-run/serve": "^2.4.1",
-    "bem-cn-lite": "^4.1.0",
     "isbot": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@bem-react/classname": "^1.6.0",
     "@gravity-ui/browserslist-config": "^4.1.0",
     "@gravity-ui/eslint-config": "^3.1.1",
     "@gravity-ui/prettier-config": "^1.1.0",
@@ -59,11 +54,12 @@
     "@remix-run/eslint-config": "^2.4.1",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "esbuild-sass-plugin": "^2.16.1",
     "eslint": "^8.27.0",
     "husky": "^8.0.3",
-    "npm-run-all": "4.1.5",
     "sass": "^1.68.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^5.0.10"
   },
   "browserslist": [
     "extends @gravity-ui/browserslist-config"

@@ -1,12 +1,12 @@
 import React from 'react';
-import block from 'bem-cn-lite';
+import {block} from '../../utils';
 import {Button, Icon} from '@gravity-ui/uikit';
 import {BookOpen, CopyTransparent, ListUl, LogoTelegram} from '@gravity-ui/icons';
-import Figma from '~/components/icons/Figma';
-import Storybook from '~/components/icons/Storybook';
-import GitHub from '~/components/icons/GitHub';
+import Figma from '../icons/Figma';
+import Storybook from '../icons/Storybook';
+import GitHub from '../icons/GitHub';
 
-import './InfoButtons.css';
+import './InfoButtons.scss';
 
 const b = block('info-buttons');
 

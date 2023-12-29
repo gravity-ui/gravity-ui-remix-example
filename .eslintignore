@@ -1,5 +1,3 @@
 build
 dist
 public
-*.css
-*.css.map

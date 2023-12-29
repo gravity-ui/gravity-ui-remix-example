@@ -30,6 +30,3 @@ yarn-error.log*
 
 .cache
 
-# this project uses scss, so automatically generated css files should be ignored
-*.css
-*.css.map

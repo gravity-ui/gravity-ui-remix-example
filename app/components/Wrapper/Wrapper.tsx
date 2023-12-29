@@ -1,9 +1,9 @@
 import React from 'react';
-import block from 'bem-cn-lite';
+import {block} from '../../utils';
 import {Button, Icon, Theme, ThemeProvider} from '@gravity-ui/uikit';
 import {Moon, Sun} from '@gravity-ui/icons';
 
-import './Wrapper.css';
+import './Wrapper.scss';
 
 const b = block('wrapper');
 
