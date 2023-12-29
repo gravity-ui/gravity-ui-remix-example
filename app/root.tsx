@@ -16,9 +16,7 @@ import '@gravity-ui/uikit/styles/styles.css';
 export const meta: MetaFunction = () => [
     {
         charset: 'utf-8',
-        title: 'Gravity UI – Remix App Example',
-        viewport: 'width=device-width,initial-scale=1',
-        description: 'Web site created using Remix',
+        title: 'Gravity UI - Remix App Example',
     },
 ];
 
@@ -29,6 +27,8 @@ const App = () => {
     return (
         <html lang="en">
             <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content="Web site created using Remix" />
                 <Meta />
                 <Links />
             </head>
