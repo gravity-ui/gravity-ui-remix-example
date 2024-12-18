@@ -6,7 +6,7 @@ installGlobals();
 
 export default defineConfig({
     ssr: {
-        noExternal: ['@gravity-ui/uikit', '@gravity-ui/icons'],
+        noExternal: ['@gravity-ui/uikit', '@gravity-ui/icons', '@gravity-ui/navigation'],
     },
     plugins: [remix()],
     optimizeDeps: {
