@@ -7,7 +7,7 @@ import {
     Scripts,
     ScrollRestoration as ScrollRestorationRemix,
 } from '@remix-run/react';
-import {getInitialRootClassName} from '@gravity-ui/uikit';
+import {DEFAULT_BODY_CLASSNAME} from './components/Wrapper';
 
 import './styles/globals.scss';
 import '@gravity-ui/uikit/styles/fonts.css';
@@ -20,9 +20,6 @@ export const meta: MetaFunction = () => [
     },
 ];
 
-const theme = 'dark';
-const rootClassName = getInitialRootClassName({theme});
-
 const App = () => {
     return (
         <html lang="en">
@@ -32,7 +29,7 @@ const App = () => {
                 <Meta />
                 <Links />
             </head>
-            <body className={rootClassName}>
+            <body className={DEFAULT_BODY_CLASSNAME}>
                 <Outlet />
                 <ScrollRestorationRemix />
                 <Scripts />
